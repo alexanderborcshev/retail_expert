@@ -15,7 +15,7 @@ class UserTest extends TestCase
     {
         User::factory(10)->create();
 
-        $response = $this->getJson('/user');
+        $response = $this->getJson('/users_test');
         $response->assertStatus(200);
         $response
             ->assertJson(fn (AssertableJson $json) => $json

@@ -4,9 +4,8 @@
 
 <template>
     <div v-for="user in $page.props.users">
-        {{ user.name }} <br>
-        {{ user.email }} <br>
-        <span v-for="skill in user.description">{{skill}} </span>
+        {{ user.name }} {{ user.email }} | <span v-for="skill in user.description">{{skill+' | '}}</span>
+        <hr>
     </div>
 </template>
 
